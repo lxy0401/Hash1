@@ -27,7 +27,7 @@ typedef struct HashElem
 //[0,size)这个区间就不能表示Hash表中有效元素的区间
 typedef struct HashTable
 {
-    //data[HashMaxSize];
+    HashElem data[HashMaxSize];
     size_t size;
     HashFunc func;//这是一个函数指针，指向一个Hash函数
 }HashTable;
