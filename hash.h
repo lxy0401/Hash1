@@ -31,3 +31,19 @@ typedef struct HashTable
     size_t size;
     HashFunc func;//这是一个函数指针，指向一个Hash函数
 }HashTable;
+
+//初始化
+void HashInit(HashTable* hashtable,HashFunc hash_func);
+
+//销毁
+void HashDestroy(HashTable* hashtable);
+
+//插入
+void HashInsert(HashTable* hashtable,KeyType key,ValueType value);
+
+//查找元素
+int HashFind(HashTable* hashtable,KeyType key,ValueType* value);
+
+//删除
+void HashRemove(HashTable* hashtable,KeyType key);
+
